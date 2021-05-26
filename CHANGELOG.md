@@ -1,3 +1,18 @@
+v2.2.0 - May 26, 2021
+
+* [`32203f6`](https://github.com/eslint/eslint-plugin-markdown/commit/32203f6ec86ec5e220d18099863d94408f334665) Update: Replace Markdown parser (fixes #125, fixes #186) (#188) (Brandon Mills)
+
+v2.1.0 - April 25, 2021
+
+* [`f1e153b`](https://github.com/eslint/eslint-plugin-markdown/commit/f1e153b8b634af7121e87b505c3c882536f4e3a5) Update: Upgrade remark-parse to v7 (fixes #77, fixes #78) (#175) (Brandon Mills)
+
+v2.0.1 - April 5, 2021
+
+* [`d23d5f7`](https://github.com/eslint/eslint-plugin-markdown/commit/d23d5f739943d136669aac945ef25528f31cd7db) Fix: use blocksCache instead of single blocks instance (fixes #181) (#183) (JounQin)
+* [`a09a645`](https://github.com/eslint/eslint-plugin-markdown/commit/a09a6452c1031b029efb17fe606cc5f56cfa0d23) Chore: add yarn.lock and package-lock.json into .gitignore (#184) (JounQin)
+* [`1280ac1`](https://github.com/eslint/eslint-plugin-markdown/commit/1280ac1f4998e8ab2030742fe510cc02d200aea2) Docs: improve jsdoc, better for typings (#182) (JounQin)
+* [`79be776`](https://github.com/eslint/eslint-plugin-markdown/commit/79be776331cf2bb4db2f265ee6cf7260e90e3d5e) Fix: More reliable comment attachment (fixes #76) (#177) (Brandon Mills)
+
 v2.0.0 - February 14, 2021
 
 * [`53dc0e5`](https://github.com/eslint/eslint-plugin-markdown/commit/53dc0e56a86144a8b93b3e220116252058fa3144) Docs: Remove prerelease README notes (#173) (Brandon Mills)

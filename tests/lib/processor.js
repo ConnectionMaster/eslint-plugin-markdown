@@ -199,7 +199,21 @@ describe("processor", () => {
 
             assert.strictEqual(blocks.length, 1);
             assert.strictEqual(blocks[0].filename, "0.js");
-            assert.strictEqual(blocks[0].text, "\n\n \n  \n");
+            assert.strictEqual(blocks[0].text, "\n\n\n \n  \n");
+        });
+
+        it("should preserve leading and trailing empty lines", () => {
+            const code = [
+                "```js",
+                "",
+                "console.log(42);",
+                "",
+                "```"
+            ].join("\n");
+            const blocks = processor.preprocess(code);
+
+            assert.strictEqual(blocks[0].filename, "0.js");
+            assert.strictEqual(blocks[0].text, "\nconsole.log(42);\n\n");
         });
 
         it("should ignore code fences with unspecified info string", () => {
@@ -362,7 +376,7 @@ describe("processor", () => {
             const blocks = processor.preprocess(code);
 
             assert.strictEqual(blocks[0].filename, "0.js");
-            assert.strictEqual(blocks[0].text, "var answer = 6 * 7;\nconsole.log(answer);\n");
+            assert.strictEqual(blocks[0].text, "var answer = 6 * 7;\r\nconsole.log(answer);\n");
         });
 
         it("should unindent space-indented code fences", () => {
@@ -450,6 +464,37 @@ describe("processor", () => {
                 "/* global foo */",
                 "/* global bar:false, baz:true */",
                 "alert(foo, bar, baz);",
+                ""
+            ].join("\n"));
+        });
+
+        // https://github.com/eslint/eslint-plugin-markdown/issues/76
+        it("should insert comments inside list items", () => {
+            const code = [
+                "* List item followed by a blank line",
+                "",
+                "<!-- eslint-disable no-console -->",
+                "```js",
+                "console.log(\"Blank line\");",
+                "```",
+                "",
+                "* List item without a blank line",
+                "<!-- eslint-disable no-console -->",
+                "```js",
+                "console.log(\"No blank line\");",
+                "```"
+            ].join("\n");
+            const blocks = processor.preprocess(code);
+
+            assert.strictEqual(blocks.length, 2);
+            assert.strictEqual(blocks[0].text, [
+                "/* eslint-disable no-console */",
+                "console.log(\"Blank line\");",
+                ""
+            ].join("\n"));
+            assert.strictEqual(blocks[1].text, [
+                "/* eslint-disable no-console */",
+                "console.log(\"No blank line\");",
                 ""
             ].join("\n"));
         });
@@ -646,7 +691,7 @@ describe("processor", () => {
             const result = processor.postprocess(messages);
 
             assert.strictEqual(result[2].column, 9);
-            assert.strictEqual(result[3].column, 2);
+            assert.strictEqual(result[3].column, 4);
             assert.strictEqual(result[4].column, 2);
         });
 
