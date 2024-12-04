@@ -1,5 +1,59 @@
 # Changelog
 
+## [7.0.0](https://github.com/ConnectionMaster/eslint-plugin-markdown/compare/v6.2.1...v7.0.0) (2024-12-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rename to @eslint/markdown ([#265](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/265))
+* Convert to ESM ([#259](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/259))
+* map known code block languages to respective file extensions ([#246](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/246))
+* drop eslint < 8 & Node.js < 18 ([#238](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/238))
+* Switch to flat config ([#232](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/232))
+* drop node v8 and v10 ([#203](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/203))
+
+### Features
+
+* add `meta` property ([#233](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/233)) ([eedda96](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/eedda967069a665b800fcf95b985424e50c77df6))
+* Add disable comment support ([#281](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/281)) ([acdbd08](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/acdbd08102a60d9521cb9c2c29917cf4b0a27e14))
+* Add Markdown languages ([#268](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/268)) ([d79c42b](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/d79c42bcb1a8f495b21733c25c8b70e881a7ebf9))
+* add name to flat configs ([#256](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/256)) ([001d51e](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/001d51e9a66bea80f0c971f05a9cf4e1126dfaa8))
+* Add type checking and type definitions ([#266](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/266)) ([0503748](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/0503748497e623842b8c78b140b766a086ee2ce7))
+* Convert to ESM ([#259](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/259)) ([e0da221](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/e0da2214cc06fd441def1844135f3c9fef74e940))
+* drop eslint &lt; 8 & Node.js < 18 ([#238](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/238)) ([f14f6a5](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/f14f6a58ffe65cee8c31beb6d8ff8bcc1ae81383))
+* drop node v8 and v10 ([#203](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/203)) ([071fa66](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/071fa661875e4bd88a91dcd39eee9276bf3f2b0a))
+* JSR package ([#271](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/271)) ([7040a2e](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/7040a2e3b9b4e1a49cf4b86dbe1ce6c52535d55e))
+* map known code block languages to respective file extensions ([#246](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/246)) ([096cff4](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/096cff4094dc9118a3538980ee56bfb8c5cb03d4))
+* Rename to @eslint/markdown ([#265](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/265)) ([e0b5457](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/e0b545708c051e605b438f9cddde8dad3ec24c6e))
+* Switch to flat config ([#232](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/232)) ([7a27eef](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/7a27eef394dbc06f24b16d926946d60accb2d4c7))
+
+
+### Bug Fixes
+
+* `message.line` could be `undefined` ([#191](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/191)) ([3a40160](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/3a401606cb2ac4dae6b95720799ed1c611af32d0))
+* `overrides` general docs and Atom linter-eslint tips (fixes [#109](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/109)) ([#111](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/111)) ([2a8482e](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/2a8482e8e39da2ab4a1d8aeb7459f26a8377905d))
+* Account for BOM in the processor ([#282](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/282)) ([01bceae](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/01bceae60fd229fbbaddf6bddffb9ec3933e8605))
+* add type tests ([#305](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/305)) ([ea60127](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/ea60127142ea335fe2ea7d70205ce6208df26bbc))
+* Add unicode-bom to unsatisfiable rules (refs [#75](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/75)) ([#84](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/84)) ([e34acc6](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/e34acc60c2867889ba4d16a2deecc2cbd03e351b))
+* Allowing eslint-plugin-prettier to work (fixes [#101](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/101)) ([#107](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/107)) ([a2f4492](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/a2f44927bda799a699bea3fbee0bfb8f6dd8ce14))
+* Apply base indent to multiple line breaks (fixes [#127](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/127)) ([#128](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/128)) ([5640ea6](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/5640ea65730abab5c9c97d77b5708f3499ec62f3))
+* check upper bounds of message line numbers for code blocks ([#247](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/247)) ([00adccb](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/00adccb49ed74e6b6ce43bc221a93d7c6782a83c))
+* correct `exports` field in package.json ([#279](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/279)) ([8e40d30](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/8e40d308dba0fdcb445cbebf56a161db16bf5806))
+* Don't require message end locations (fixes [#112](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/112)) ([#154](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/154)) ([0311640](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/03116401ae7be0c86b5a48d22aacd94df387a5df))
+* Emit correct endLine numbers ([#88](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/88)) ([dff8e9c](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/dff8e9c7f334af8a68a6c8a3671ffc01c3bdafbb))
+* Exclude eol-last from output (fixes [#48](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/48)) ([abab043](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/abab043f054e0b7f838615875b579c81d6aa288b))
+* Ignore anything after space in code fence's language (fixes [#98](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/98)) ([#99](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/99)) ([a5d0cce](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/a5d0ccec6f14f4808a535c0f06273d1e9892be15))
+* Ignore words in info string after syntax (fixes [#166](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/166)) ([#167](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/167)) ([23ac2b9](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/23ac2b95b1c2666baf422c24f5b73607d315a700))
+* Indent multiline fixes (fixes [#120](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/120)) ([#124](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/124)) ([fb0b5a3](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/fb0b5a3fc36ad362556cafc49929f49e3b4bc6b0))
+* More reliable comment attachment (fixes [#76](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/76)) ([#177](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/177)) ([79be776](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/79be776331cf2bb4db2f265ee6cf7260e90e3d5e))
+* no-missing-label-refs should not crash on undefined labels ([#290](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/290)) ([ac1bc1c](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/ac1bc1c2615184128ecad07e44079213b4ecc7da))
+* npm prepare script on Windows (refs [#166](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/166)) ([#168](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/168)) ([1dd7089](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/1dd70890b92827a5fbd3a86a62c3f2bc30389340))
+* overrides pattern for virtual filenames in recommended config ([#169](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/169)) ([f6a3fad](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/f6a3fada43aaeb613aaf9168dfd06a53b9db0ab4))
+* Remove peer dependency ([#284](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/284)) ([2cf3c6b](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/2cf3c6bb7a3572e868bbb271c56763cb0bc9172f))
+* Support autofix at the very start of blocks (fixes [#117](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/117)) ([#119](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/119)) ([dc90961](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/dc909618aa8f39e84279f5bdeb4a888d56d919b1))
+* Support globals (fixes [#79](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/79)) ([#81](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/81)) ([7c19f8b](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/7c19f8bdd5db610ea4c65208f5a37fea684a8d7b))
+* use blocksCache instead of single blocks instance (fixes [#181](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/181)) ([#183](https://github.com/ConnectionMaster/eslint-plugin-markdown/issues/183)) ([d23d5f7](https://github.com/ConnectionMaster/eslint-plugin-markdown/commit/d23d5f739943d136669aac945ef25528f31cd7db))
+
 ## [6.2.1](https://github.com/eslint/markdown/compare/v6.2.0...v6.2.1) (2024-10-16)
 
 
